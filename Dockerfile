@@ -19,8 +19,8 @@ RUN apt install nmap -y
 WORKDIR $DIR
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-COPY installer.sh .
-RUN bash installer.sh
+#COPY installer.sh .
+#RUN bash installer.sh
 COPY . .
 # start the bot.
 CMD ["bash", "startup"]
